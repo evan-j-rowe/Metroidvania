@@ -1,0 +1,2 @@
+Hitbox.HitboxFrame()
+Behavior.Frame()

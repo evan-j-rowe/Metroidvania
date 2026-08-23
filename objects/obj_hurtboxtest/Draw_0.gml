@@ -1,0 +1,1 @@
+BulletAsset.Draw()

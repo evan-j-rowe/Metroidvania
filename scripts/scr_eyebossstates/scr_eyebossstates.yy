@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_eyebossstates",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_eyebossstates",
+  "parent":{
+    "name":"EyeBoss",
+    "path":"folders/Objects/EyeBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

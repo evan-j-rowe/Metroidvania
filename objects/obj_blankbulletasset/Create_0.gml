@@ -1,0 +1,1 @@
+BulletAsset = new global.BulletAsset(self)
