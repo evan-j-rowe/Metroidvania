@@ -1,4 +1,4 @@
-global.Behavior = function(instance, team = "NeutralHitboxes") constructor {
+global.Behavior = function(instance, team = "NeutralHitboxes") constructor { //
 	
 	InputMode = -1 //0,1 (players 1 and 2), -1 (ai)
 	Instance = instance
