@@ -1,5 +1,5 @@
 Hitbox = new global.Hitbox(self,"Enemies")
-Hitbox.Health = 500
+Hitbox.Health = 35//0
 
 Behavior = new global.Behavior(self,"Enemies")
 Behavior.States[0] = variable_clone(global.States.Boss_TimerChase)
@@ -10,6 +10,7 @@ Behavior.States[1].JumpDrag *= 2
 Behavior.States[1].LandTimer = 0
 Behavior.States[1].JumpStretch = true
 Behavior.States[1].JumpStretchValue = 3000
+Behavior.States[1].PrepareTimer = 0
 
 
 Behavior.States[1].PrepareFrameFunction =  function() {

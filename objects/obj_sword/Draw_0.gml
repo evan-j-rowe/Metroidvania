@@ -12,8 +12,8 @@ if mouse_check_button_pressed(mb_left) && attacking == false && debounce <= 0 {
 	
 	angle = point_direction(obj_player1.x,obj_player1.y,mouse_x,mouse_y)
 	
-	image_xscale = currentsword.damage_width
-	image_yscale = currentsword.damage_height
+	image_xscale = currentsword.damage_width/10
+	image_yscale = currentsword.damage_height/10
 	Hurtbox.Damage = currentsword.damage
 }
 

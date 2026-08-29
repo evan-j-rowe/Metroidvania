@@ -13,8 +13,8 @@ swordData = {
 	sweeping_timer: 0.4,
 	sweeping_lerp_value : 32,
 	debounce: 0.25,
-	damage_width : 30,
-	damage_height : 20,
+	damage_width : 60,
+	damage_height : 50,
 	distance : 15,
 }
 
