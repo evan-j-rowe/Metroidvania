@@ -6,7 +6,7 @@
   "name":"scr_eyebossstates",
   "parent":{
     "name":"EyeBoss",
-    "path":"folders/Objects/EyeBoss.yy",
+    "path":"folders/Enemies/1/EyeBoss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

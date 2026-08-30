@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Objects/EyeBoss/Objects.yy",
+    "path":"folders/Enemies/1/EyeBoss/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_hurtboxtest",

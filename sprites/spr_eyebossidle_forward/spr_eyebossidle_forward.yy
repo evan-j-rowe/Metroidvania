@@ -47,7 +47,7 @@
   "origin":7,
   "parent":{
     "name":"Idle",
-    "path":"folders/Objects/EyeBoss/Sprites/Idle.yy",
+    "path":"folders/Enemies/1/EyeBoss/Sprites/Idle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

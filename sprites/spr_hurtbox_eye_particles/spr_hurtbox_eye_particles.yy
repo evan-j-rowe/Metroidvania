@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Bullets",
-    "path":"folders/Objects/EyeBoss/Sprites/Bullets.yy",
+    "path":"folders/Enemies/1/EyeBoss/Sprites/Bullets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

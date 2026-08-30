@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Props",
-    "path":"folders/Sprites/Props.yy",
+    "path":"folders/Areas/1/Props.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

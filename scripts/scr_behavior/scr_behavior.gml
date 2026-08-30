@@ -84,6 +84,9 @@ global.Behavior = function(instance, team = "NeutralHitboxes") constructor { //
 					} else {
 						self.WalkingSpeedTarget = 0
 					}
+				} else {
+					self.WalkingSpeedTarget = 1
+					
 				}
 				
 				self.WalkingSpeedCurrent = scr_lerp(self.WalkingSpeedCurrent,
@@ -229,6 +232,82 @@ global.States.General_Smash = function () : constructor_state() constructor {
 			self.PrepareFrameFunction()
 		} else if self.Phase == 2 {
 			self.LandFrameFunction()
+		}
+	}
+}
+
+
+global.States.General_WanderUntilDistance = function() : constructor_state() constructor {
+	DistanceUntilChase = 130
+	NextState = noone
+	StartX = 0
+	StartY = 0 
+	TargetX = 0
+	TargetY = 0
+	WanderBoundry = 50
+	MovementBehavior = "wandering"
+	WanderDelay = 1
+	
+	
+	Start = function(a,nextState,) {
+		self.NextState = nextState
+		
+		self.StartX = a.Instance.x
+		self.StartY = a.Instance.y
+		
+		self.TargetX = self.StartX + irandom_range(-self.WanderBoundry,self.WanderBoundry)
+		self.TargetY = self.StartY + irandom_range(-self.WanderBoundry,self.WanderBoundry)
+		self.Timer = 0
+	}
+	
+	Frame = function(a) {
+		var dis = point_distance(a.Instance.x,a.Instance.y,obj_player1.x,obj_player1.y)
+		
+		self.Timer -= delta()
+		if self.Timer < 0 {
+			self.AllowMovement = true
+			if point_distance(a.Instance.x,a.Instance.y,self.TargetX,self.TargetY) < 5 {
+				self.Timer = self.WanderDelay
+				self.TargetX = self.StartX + irandom_range(-self.WanderBoundry,self.WanderBoundry)
+				self.TargetY = self.StartY + irandom_range(-self.WanderBoundry,self.WanderBoundry)
+				self.AllowMovement = false
+			} else {
+				a.WalkingAngle = point_direction(a.Instance.x,a.Instance.y,self.TargetX,self.TargetY)
+			}
+			
+			
+		}
+		
+		
+		
+		if dis < self.DistanceUntilChase {
+			if self.NextState {
+				a.CurrentState = self.NextState
+				self.NextState.Start(a)
+			} else {
+				a.StateEnded = true
+			}
+		}
+	}
+}
+
+global.States.General_Dash = function() : constructor_state() constructor {
+	AllowMovement = true
+	MovementBehavior = "chasePlayer"
+	DashForce = 300
+	DelayBeforeDash = 0.5
+	Start = function(a,force = 1000) {
+		self.Timer = 0
+	}
+	
+	Frame = function(a) {
+		self.Timer += delta()
+	
+		if self.Timer > self.DelayBeforeDash && struct_exists(a.Instance,"Hitbox") {
+			angle = point_direction(a.Instance.x,a.Instance.y,obj_player1.x,obj_player1.y)
+			a.Instance.Hitbox.KnockbackX += lengthdir_x(self.DashForce,angle)
+			a.Instance.Hitbox.KnockbackY += lengthdir_y(self.DashForce,angle)
+			a.StateEnded = true
 		}
 	}
 }

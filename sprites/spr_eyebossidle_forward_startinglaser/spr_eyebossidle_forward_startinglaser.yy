@@ -56,7 +56,7 @@
   "origin":7,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Objects/EyeBoss/Sprites.yy",
+    "path":"folders/Enemies/1/EyeBoss/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -13,8 +13,15 @@ function scr_lerp(s,e,d){
 
 global.hurtboxPlayerDelay = 1
 
+global.PITDEPTH = 2000
+global.FLOORDEPTH = 0
+global.WALLSDEPTH = -2000
+global.ROOFDEPTH = -4000
+global.UIDEPTH = -4500
+
+
 function set_depth(rank) {
-	return -rank
+	return -rank + -2500
 }
 
 function set_depth_instance(ins) {

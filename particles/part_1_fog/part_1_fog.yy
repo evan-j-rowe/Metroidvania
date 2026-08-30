@@ -14,7 +14,7 @@
   "name":"part_1_fog",
   "parent":{
     "name":"Props",
-    "path":"folders/Sprites/Props.yy",
+    "path":"folders/Areas/1/Props.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

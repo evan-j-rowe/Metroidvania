@@ -57,7 +57,7 @@ Behavior.States[1].LandFunction = function() {
 
 Behavior.States[2] = variable_clone(global.States.Boss_EyeBulletStream)
 
-Behavior.States[3] = variable_clone(global.States.Boss_Dash)
+Behavior.States[3] = new global.States.General_Dash()
 Behavior.States[3].DashForce = 1200
 
 Behavior.States[4] = variable_clone(global.States.Boss_Eye_RepeatingWaves)
@@ -91,6 +91,6 @@ Behavior.WalkingSpeed *= 1.2
 
 
 Hurtbox = new global.Hurtbox(self,"PlayerOnlyHurtboxes")
-Hurtbox.Knockback = 130
+Hurtbox.Knockback = global.TOUCH_DEFAULT_KNOCKBACK
 
 DashLerp = 100

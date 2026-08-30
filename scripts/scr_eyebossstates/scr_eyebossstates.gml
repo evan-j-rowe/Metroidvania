@@ -216,32 +216,6 @@ global.States.Boss_EyeBulletStream.Frame = function(a) {
 	}
 }
 
-
-//Dashs towards player
-global.States.Boss_Dash = new global.State()
-global.States.Boss_Dash.AllowMovement = true
-global.States.Boss_Dash.MovementBehavior = "chasePlayer"
-global.States.Boss_Dash.NextState = noone
-global.States.Boss_Dash.DashForce = 300
-global.States.Boss_Dash.DelayBeforeDash = 3
-global.States.Boss_Dash.Start = function(a,force = 1000) {
-	self.Timer = 0
-	self.DashForce = 900
-}
-
-global.States.Boss_Dash.Frame = function(a) {
-	self.Timer += delta()
-	
-	if self.Timer > 0.5 && struct_exists(a.Instance,"Hitbox") {
-		angle = point_direction(a.Instance.x,a.Instance.y,obj_player1.x,obj_player1.y)
-		a.Instance.Hitbox.KnockbackX += lengthdir_x(self.DashForce,angle)
-		a.Instance.Hitbox.KnockbackY += lengthdir_y(self.DashForce,angle)
-		a.StateEnded = true
-	}
-}
-
-
-
 global.States.Boss_Eye_RepeatingWaves = new global.State()
 global.States.Boss_Eye_RepeatingWaves.AllowMovement = false
 global.States.Boss_Eye_RepeatingWaves.Start = function(a,force = 1000) {
