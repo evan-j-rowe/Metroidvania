@@ -15,6 +15,10 @@ if mouse_check_button_pressed(mb_left) && attacking == false && debounce <= 0 {
 	image_xscale = currentsword.damage_width/10
 	image_yscale = currentsword.damage_height/10
 	Hurtbox.Damage = currentsword.damage
+	
+	obj_player1.Behavior.WalkingSpeedCurrent = 0
+	obj_player1.Hitbox.KnockbackX -= lengthdir_x(50,angle)
+	obj_player1.Hitbox.KnockbackY -= lengthdir_y(50,angle)
 }
 
 if attacking {

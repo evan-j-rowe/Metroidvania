@@ -93,8 +93,16 @@ global.Behavior = function(instance, team = "NeutralHitboxes") constructor { //
 				self.WalkingSpeedTarget*self.WalkingSpeed
 				,self.WalkingAcceleration)
 				
-				self.Instance.x += lengthdir_x(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
-				self.Instance.y += lengthdir_y(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
+				//self.Instance.x += lengthdir_x(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
+				//self.Instance.y += lengthdir_y(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
+				
+				global.lx = lengthdir_x(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
+				global.ly = lengthdir_y(self.WalkingSpeedCurrent*delta(),self.WalkingAngle)
+				
+				with self.Instance {
+					move_and_collide(global.lx,global.ly,obj_wall)
+				}
+				
 				
 				set_sprite_type_direction("Movement",self)
 			}

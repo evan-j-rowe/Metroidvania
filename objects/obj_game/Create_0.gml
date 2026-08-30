@@ -1,0 +1,1 @@
+instance_create_depth(obj_player1.x,obj_player1.y,global.UIDEPTH,obj_camera)

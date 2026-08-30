@@ -135,8 +135,12 @@ global.Hitbox = function(instance,team = "NeutralHitboxes",entity = noone,hitpoi
 		}
 		
 		if self.KnockbackMultiplier != 0 {
-			self.Instance.x += self.KnockbackX*delta()
-			self.Instance.y += self.KnockbackY*delta()
+			global.lx = self.KnockbackX*delta()
+			global.ly = self.KnockbackY*delta()
+			
+			with (self.Instance) {
+				move_and_collide(global.lx,global.ly,obj_wall)
+			}
 			
 			self.KnockbackX = scr_lerp(self.KnockbackX,0,self.KnockbackFriction)
 			self.KnockbackY = scr_lerp(self.KnockbackY,0,self.KnockbackFriction)

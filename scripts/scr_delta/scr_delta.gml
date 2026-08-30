@@ -21,9 +21,9 @@ global.UIDEPTH = -4500
 
 
 function set_depth(rank) {
-	return -rank + -2500
+	return -rank
 }
 
 function set_depth_instance(ins) {
-	ins.depth = -ins.bbox_bottom/10
+	ins.depth = -3000 -ins.bbox_bottom/10
 }

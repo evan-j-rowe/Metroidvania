@@ -3,7 +3,7 @@ Hitbox = new global.Hitbox(self,"Player")
 Hitbox.Player = true
 Hitbox.Health = 5
 Hitbox.DamageAdd = function() {
-	Hitbox.DamageCooldown = 0.9
+	Hitbox.DamageCooldown = 1.3
 }
 
 Behavior = new global.Behavior(self,"Player")

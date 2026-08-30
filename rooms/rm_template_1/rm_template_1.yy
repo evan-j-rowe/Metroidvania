@@ -54,8 +54,8 @@
   ],
   "name":"rm_template_1",
   "parent":{
-    "name":"Areas",
-    "path":"folders/Areas.yy",
+    "name":"1",
+    "path":"folders/Areas/1.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

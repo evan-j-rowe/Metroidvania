@@ -6,8 +6,8 @@
   "name":"obj_1_areacontroller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Areas",
-    "path":"folders/Areas.yy",
+    "name":"1",
+    "path":"folders/Areas/1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Props",
-    "path":"folders/Areas/1/Props.yy",
+    "name":"Weather",
+    "path":"folders/Areas/1/Weather.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

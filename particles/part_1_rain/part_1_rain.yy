@@ -13,8 +13,8 @@
   ],
   "name":"part_1_rain",
   "parent":{
-    "name":"Props",
-    "path":"folders/Areas/1/Props.yy",
+    "name":"Weather",
+    "path":"folders/Areas/1/Weather.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",
