@@ -319,3 +319,38 @@ global.States.General_Dash = function() : constructor_state() constructor {
 		}
 	}
 }
+
+global.States.General_BulletExplusion = function() : constructor_state() constructor {
+	AllowMovement = true
+	MovementBehavior = "chasePlayer"
+	BulletType = obj_hurtboxtest
+	Phase = 0
+	DelayBeforeSpit = 0.5
+	DelayAfterSpit = 0.2
+	PropellBackwards = 100
+	
+	Start = function(a) {
+		self.Timer = self.DelayBeforeSpit
+		self.Phase = 0
+	}
+	
+	Frame = function(a) {
+		self.Timer -= delta()
+		
+		if self.Timer < 0 {
+			if self.Phase == 0 {
+				self.Phase += 1
+				self.Timer = self.DelayAfterSpit
+				
+				var dir = point_direction(a.Instance.x,a.Instance.y,obj_player1.x,obj_player1.y)
+				
+				
+				var ins = instance_create_depth(a.Instance.x,a.Instance.y,a.Instance.depth,self.BulletType)
+				ins.BulletAsset.Angle = dir
+				show_debug_message("fffffffffffffffffff")
+			} else {
+				a.StateEnded = true
+			}
+		}
+	}
+}

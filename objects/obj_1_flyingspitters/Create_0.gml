@@ -1,11 +1,14 @@
 Hitbox = new global.Hitbox(self,"Enemies")
-Hitbox.Health = 23
+Hitbox.Health = 18
 
 Behavior = new global.Behavior(self,"Enemies")
 Behavior.States[0] = new global.States.General_WanderUntilDistance()
+Behavior.States[1] = new global.States.General_BulletExplusion()
+Behavior.States[1].BulletType = obj_flyingspitter_goop
+Behavior.States[1].DelayBeforeSpit = 3
+Behavior.States[2] = variable_clone(global.States.Boss_TimerChase)
 Behavior.States[0].DistanceUntilChase = 160
-Behavior.States[1] = new global.States.General_Dash()
-Behavior.States[1].DelayBeforeDash = 1
+Behavior.States[0].WanderBoundry = 30
 Behavior.WalkingSpeed = 10
 
 Behavior.PickState = function() {

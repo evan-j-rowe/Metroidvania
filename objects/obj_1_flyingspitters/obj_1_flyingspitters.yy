@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_1_chompers",
+  "%Name":"obj_1_flyingspitters",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_1_chompers",
+  "name":"obj_1_flyingspitters",
   "overriddenProperties":[],
   "parent":{
-    "name":"Chompers",
-    "path":"folders/Enemies/1/Chompers.yy",
+    "name":"FlyingSpitters",
+    "path":"folders/Enemies/1/FlyingSpitters.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_chomps_idle",
-    "path":"sprites/spr_chomps_idle/spr_chomps_idle.yy",
+    "name":"spr_flyingspitters_idle",
+    "path":"sprites/spr_flyingspitters_idle/spr_flyingspitters_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

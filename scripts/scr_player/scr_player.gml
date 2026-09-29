@@ -3,14 +3,6 @@ global.PlayerTemplate = function() constructor {
   Name = "Nameless"
   InputMode = "Keyboard/Mouse" //ControllerId
   Humanoid = noone
- 
-  //energy/charge/weapons
-  ManaValue = 0.3 //goes up to 1
-  PrimaryWeapon = ""
-  Guns = []
-  GunValue = 0
-  Currency = 4
-  Upgrades = []
 }
 
 global.money = 0
